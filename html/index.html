@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+    <script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+</head>
+<body>
+</body>
+
+<script>
+//    d3.select('body').append('p').text('Hello d3')              //数据选择
+    var data = [1,2,3,4]
+//    d3.select('body').data(data).enter().append('p').text('hello data')
+    d3.select('body').data(data).enter().append('p').text(function (d) {
+        return '序号:'+d
+    }).style('color',function (d) {
+        return d >3 ? 'red':'blue'
+    })
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar</title>
+    <script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+</head>
+<style>
+    div.bar {
+        display: inline-block;
+        width: 20px;
+        margin-right: 2px;
+        background-color: teal;
+    }
+</style>
+<body>
+<div></div>
+</body>
+<script>
+    var data = [1,2,3,4,5,6,7];
+    d3.select('body').data(data)
+            .enter()
+            .append('div')
+            .attr('class','bar')
+            .style('height',function (d) {
+                return (d *10) + 'px';
+            })
+</script>
+</html>
